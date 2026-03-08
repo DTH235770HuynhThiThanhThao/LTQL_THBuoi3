@@ -96,7 +96,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1177, 239);
+            groupBox1.Size = new Size(1177, 237);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Sản phẩm";
@@ -106,12 +106,14 @@
             picHinhAnh.Location = new Point(793, 22);
             picHinhAnh.Name = "picHinhAnh";
             picHinhAnh.Size = new Size(163, 166);
+            picHinhAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             picHinhAnh.TabIndex = 5;
             picHinhAnh.TabStop = false;
             // 
             // numDonGia
             // 
             numDonGia.Location = new Point(566, 71);
+            numDonGia.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numDonGia.Name = "numDonGia";
             numDonGia.Size = new Size(201, 27);
             numDonGia.TabIndex = 4;
@@ -119,9 +121,11 @@
             // numSoLuong
             // 
             numSoLuong.Location = new Point(566, 30);
+            numSoLuong.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numSoLuong.Name = "numSoLuong";
             numSoLuong.Size = new Size(201, 27);
             numSoLuong.TabIndex = 4;
+            numSoLuong.ThousandsSeparator = true;
             // 
             // cboHangSanXuat
             // 
@@ -310,9 +314,9 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView);
-            groupBox2.Location = new Point(14, 265);
+            groupBox2.Location = new Point(12, 264);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1175, 381);
+            groupBox2.Size = new Size(1171, 350);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách sản phẩm";
@@ -329,9 +333,8 @@
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1169, 355);
+            dataGridView.Size = new Size(1165, 324);
             dataGridView.TabIndex = 0;
-            dataGridView.CellFormatting += dataGridView_CellFormatting;
             // 
             // ID
             // 
@@ -377,6 +380,7 @@
             // 
             // HinhAnh
             // 
+            HinhAnh.DataPropertyName = "HinhAnh";
             HinhAnh.HeaderText = "Hình ảnh";
             HinhAnh.MinimumWidth = 6;
             HinhAnh.Name = "HinhAnh";
@@ -385,7 +389,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1205, 658);
+            ClientSize = new Size(1200, 626);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "frmSanPham";
